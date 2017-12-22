@@ -4,6 +4,7 @@
 export default function(state = null, action) {
   switch(action.type) {
   case 'BOOK_SELECTED':
+    // action is a state, payload is a property of that state
     return action.payload; // State should never be mutated here
   }
   return state;
