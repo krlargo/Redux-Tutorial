@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { selectBook } from './actions/index';
+import { selectBook } from '../actions/index';
 import { bindActionCreators } from 'redux'; // Makes sure action flows through all reducers in application
 
 class BookList extends Component {
@@ -11,7 +11,8 @@ class BookList extends Component {
       return (
         <li
           key={book.title}
-          className="list-group-item">
+          className="list-group-item"
+          onClick={() => this.props.selectBook(book)}>
           {book.title}
         </li>
       );
